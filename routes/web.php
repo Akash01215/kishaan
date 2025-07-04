@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
+Route::view('/dashboard', 'backend.dashboard')->name('dashboard');
+
