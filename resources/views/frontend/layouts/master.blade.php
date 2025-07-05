@@ -11,10 +11,10 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- Existing fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-    
+
     <!-- Added Caveat font -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
 
@@ -34,12 +34,13 @@
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet" />
 
     <style>
-        /* Caveat font CSS classes */
         .caveat-normal {
             font-family: "Caveat", cursive;
             font-weight: 400;
             font-style: normal;
             font-optical-sizing: auto;
+            font-size: 1.1rem;
+            /* Increase size */
         }
 
         .caveat-bold {
@@ -47,8 +48,27 @@
             font-weight: 700;
             font-style: normal;
             font-optical-sizing: auto;
+            font-size: 1.2rem;
+            /* Increase size */
+        }
+
+        .caveat-display-4 {
+            font-family: "Caveat", cursive;
+            font-weight: 700;
+            font-size: 3.5rem;
+            /* Bootstrap display-4 approx 3.5rem hota hai */
+            line-height: 1.2;
+        }
+        .caveat-display-2{
+            font-family: "Caveat", cursive;
+            font-weight: 700;
+            font-size: 1.5rem;
+            /* Bootstrap display-1 approx 2.5rem hota hai */
+            line-height: 1.2;
+           
         }
     </style>
+
 </head>
 
 <body>

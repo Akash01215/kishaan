@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 Route::view('/dashboard', 'backend.dashboard')->name('dashboard');
-
+Route::view('/master', 'backend.layouts.master')->name('master');

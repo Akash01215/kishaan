@@ -10,11 +10,11 @@
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="{{ asset('frontend/img/team-1.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('frontend/img/akash.JPG') }}" class="img-fluid" alt="">
                             </div>
                             <div class="team-title">
-                                <h4 class="mb-0">David James</h4>
-                                <p class="mb-0">Profession</p>
+                                <h4 class="mb-0">Akash kumar pandit</h4>
+                                <p class="mb-0">Web Developer</p>
                             </div>
                             <div class="team-icon">
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
@@ -27,11 +27,11 @@
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="{{ asset('frontend/img/team-2.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('frontend/img/raunak.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="team-title">
-                                <h4 class="mb-0">David James</h4>
-                                <p class="mb-0">Profession</p>
+                                <h4 class="mb-0">Raunak sah</h4>
+                                <p class="mb-0">Web Developer</p>
                             </div>
                             <div class="team-icon">
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>

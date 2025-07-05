@@ -1,7 +1,7 @@
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
         <a href="" class="navbar-brand p-0">
-            <h1 class="text-primary caveat-bold"><i class="fas fa-leaf me-3"></i>Krishi AI</h1>
+            <h1 class="text-primary caveat-display-4"><i class="fas fa-leaf me-3"></i>Krishi AI</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
@@ -41,9 +41,9 @@
                         <div class="col-lg-0 col-xl-5"></div>
                         <div class="col-xl-7 animated fadeInLeft">
                             <div class="text-sm-center text-md-end">
-                                <h4 class="text-primary text-uppercase fw-bold mb-4 caveat-bold">Welcome to Krishi AI</h4>
-                                <h1 class="display-4 text-uppercase text-white mb-4 caveat-bold">Empowering Farmers with AI-based Support</h1>
-                                <p class="caveat-normal text-white">
+                                <h4 class="text-primary text-uppercase fw-bold mb-4 caveat-display-4">Welcome to Krishi AI</h4>
+                                <h1 class="display-4 text-uppercase text-white mb-4 caveat-display-4">Empowering Farmers with AI-based Support</h1>
+                                <p class="caveat-display-2 text-white">
                                     Krishi AI is an intelligent farming assistant that helps farmers make better decisions.
                                     Whether it's choosing the right crop, suggesting the best fertilizer, or identifying
                                     plant diseases through images, our platform simplifies farming with the power of Artificial Intelligence.
@@ -75,9 +75,9 @@
                     <div class="row g-5">
                         <div class="col-12 animated fadeInUp">
                             <div class="text-center">
-                                <h4 class="text-primary text-uppercase fw-bold mb-4 caveat-bold">Smart Agriculture Solutions</h4>
-                                <h1 class="display-4 text-uppercase text-white mb-4 caveat-bold">Your Personal Digital Farming Assistant</h1>
-                                <p class="mb-5 fs-5 caveat-normal text-white">
+                                <h4 class="text-primary text-uppercase fw-bold mb-4 caveat-display-4">Smart Agriculture Solutions</h4>
+                                <h1 class="display-4 text-uppercase text-white mb-4 caveat-display-4">Your Personal Digital Farming Assistant</h1>
+                                <p class="mb-5 fs-5 caveat-display-2 text-white">
                                     Our multilingual AI-driven website offers features like voice-based farming queries,
                                     crop and fertilizer recommendation based on real data, and real-time plant disease prediction
                                     through image upload. Let technology transform the way you farm!
