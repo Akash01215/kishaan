@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 Route::view('/dashboard', 'backend.dashboard')->name('dashboard');
 Route::view('/master', 'backend.layouts.master')->name('master');
+
+
+Route::view('/backend/sidebar/table', 'backend.sidebar.table')->name('table');
