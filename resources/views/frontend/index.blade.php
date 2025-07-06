@@ -12,19 +12,7 @@
         @include('frontend.partials.services')
         <!-- Services End -->
 
-        <!-- Features Start -->
       
-        <!-- Features End -->
-
-
-        <!-- Offer Start -->
-       
-        <!-- Offer End -->
-
-        <!-- Blog Start -->
-       
-        <!-- Blog End -->
-
 
         <!-- FAQs Start -->
         @include('frontend.partials.faqs')
