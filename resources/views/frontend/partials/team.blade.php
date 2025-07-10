@@ -44,7 +44,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="{{ asset('frontend/img/pushpa.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('frontend/img/image.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="team-title">
                                 <h4 class="mb-0">Pushpa kumari</h4>
