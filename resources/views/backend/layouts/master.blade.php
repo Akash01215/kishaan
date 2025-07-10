@@ -67,9 +67,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="../pages/virtual-reality.html">
+                    <a class="nav-link text-dark" href="{{ url('/backend/setting/form') }}">
                         <i class="material-symbols-rounded opacity-5">view_in_ar</i>
-                        <span class="nav-link-text ms-1">Virtual Reality</span>
+                        <span class="nav-link-text ms-1">site settings</span>
                     </a>
                 </li>
                 <li class="nav-item">
