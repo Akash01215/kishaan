@@ -121,6 +121,38 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+// Adjust navbar background color on scroll
+    <script>
+    window.addEventListener('scroll', function () {
+        const siteName = document.getElementById('siteName');
+        if (window.scrollY > 50) {
+            siteName.style.color = 'black';
+        } else {
+            siteName.style.color = 'white';
+        }
+    });
+</script>
+
+// Adjust logo size and border on scroll
+<script>
+    window.addEventListener('scroll', function () {
+        const siteName = document.getElementById('siteName');
+        const siteLogo = document.getElementById('siteLogo');
+
+        if (window.scrollY > 50) {
+            siteName.style.color = 'black';
+            siteLogo.style.height = '50px';   // slightly smaller
+            siteLogo.style.width = '50px';
+            siteLogo.style.border = '2px solid #000'; // black border
+        } else {
+            siteName.style.color = 'white';
+            siteLogo.style.height = '60px';   // original size
+            siteLogo.style.width = '60px';
+            siteLogo.style.border = 'none';
+        }
+    });
+</script>
+
 </body>
 
 </html>

@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ asset('backend/css/material-dashboard.css?v=3.2.0') }}" rel="stylesheet" />
+   <!--<link rel="stylesheet" href="{{ asset('frontend/css/styles.css') }}">-->
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -67,7 +68,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="{{ url('/backend/setting/form') }}">
+                    <a class="nav-link text-dark" href="{{ route('site.setting') }}">
                         <i class="material-symbols-rounded opacity-5">view_in_ar</i>
                         <span class="nav-link-text ms-1">site settings</span>
                     </a>

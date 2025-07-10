@@ -4,18 +4,19 @@
             <div class="d-flex flex-wrap">
                 <a href="#" class="text-muted small me-4 caveat-normal">
                     <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                    Birgunj, Nepal
+                    {{ $globalSettings['address'] ?? 'Birgunj, Nepal' }}
                 </a>
-                <a href="tel:+9779821281469" class="text-muted small me-4 caveat-normal">
+                <a href="tel:{{ $globalSettings['phone'] ?? '+9779821281469' }}" class="text-muted small me-4 caveat-normal">
                     <i class="fas fa-phone-alt text-primary me-2"></i>
-                    +977-9821281469
+                    {{ $globalSettings['phone'] ?? '+977-9821281469' }}
                 </a>
-                <a href="mailto:krishiassist@gmail.com" class="text-muted small me-0 caveat-normal">
+                <a href="mailto:{{ $globalSettings['email'] ?? 'krishiassist@gmail.com' }}" class="text-muted small me-0 caveat-normal">
                     <i class="fas fa-envelope text-primary me-2"></i>
-                    krishiassist@gmail.com
+                    {{ $globalSettings['email'] ?? 'krishiassist@gmail.com' }}
                 </a>
             </div>
         </div>
+
         <div class="col-lg-4 text-center text-lg-end">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
                 <a href="#" class="me-3 text-dark caveat-bold">
