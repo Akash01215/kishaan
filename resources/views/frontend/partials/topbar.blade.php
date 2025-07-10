@@ -19,10 +19,10 @@
 
         <div class="col-lg-4 text-center text-lg-end">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a href="#" class="me-3 text-dark caveat-bold">
+                <a href="{{ url('register') }}" class="me-3 text-dark caveat-bold">
                     <small><i class="fa fa-user text-primary me-2"></i>Register</small>
                 </a>
-                <a href="#" class="me-3 text-dark caveat-bold">
+                <a href="{{ url('login') }}" class="me-3 text-dark caveat-bold">
                     <small><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small>
                 </a>
                 <div class="dropdown">

@@ -26,3 +26,9 @@ Route::view('/backend/sidebar/table', 'backend.sidebar.table')->name('table');
 
 Route::get('/settings', [SettingController::class, 'index'])->name('site.setting');
 Route::post('/settings/update', [SettingController::class, 'update'])->name('site.setting.update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/register', 'auth.register')->name('register');
+Route::view('/login', 'auth.login')->name('login');
