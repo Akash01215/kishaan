@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Providers;
+use App\SiteSetting;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+       $settings = SiteSetting::pluck('value', 'key')->toArray();
+       view()->share('globalSettings', $settings);
     }
 }
+

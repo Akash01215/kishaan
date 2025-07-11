@@ -49,19 +49,19 @@
                     <h4 class="text-white mb-4">Contact Info</h4>
                     <div class="d-flex align-items-center">
                         <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                        <p class="text-white mb-0">Birgunj, Nepal</p>
+                        <p class="text-white mb-0">{{ $globalSettings['address'] ?? 'Birgunj, Nepal' }}</p>
                     </div>
                     <div class="d-flex align-items-center">
                         <i class="fas fa-envelope text-primary me-3"></i>
-                        <p class="text-white mb-0">krishiassist@gmail.com</p>
+                        <p class="text-white mb-0">{{ $globalSettings['email'] ?? 'krishiassist@gmail.com' }}</p>
                     </div>
                     <div class="d-flex align-items-center">
                         <i class="fa fa-phone-alt text-primary me-3"></i>
-                        <p class="text-white mb-0">+977-9821281469</p>
+                        <p class="text-white mb-0">{{ $globalSettings['phone'] ?? '+977-9821281469' }}</p>
                     </div>
                     <div class="d-flex align-items-center mb-4">
                         <i class="fab fa-chrome text-primary me-3"></i>
-                        <p class="text-white mb-0">www.krishiassist.com</p>
+                        <p class="text-white mb-0">{{ $globalSettings['website'] ?? 'www.krishiassist.com' }}</p>
                     </div>
                     <div class="d-flex">
                         <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
