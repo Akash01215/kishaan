@@ -62,7 +62,15 @@
             color: #fff;
         }
 
-      
+        
+        body, .caveat-normal, .caveat-bold {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem; /* Increase as needed */
+        }
+
+        .caveat-bold {
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
