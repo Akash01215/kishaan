@@ -22,10 +22,10 @@ class LoginController extends Controller
            switch($user->role){
                case 'admin':
 
-                   return redirect()->intended('site.settings');
+                   return redirect()->intended('dashboard');
                default:
                    return redirect()->intended('');
-              
+
            }
     }
    }

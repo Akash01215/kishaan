@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,14 +23,13 @@ Route::get('/', function () {
 Route::view('/dashboard', 'backend.dashboard')->name('dashboard');
 Route::view('/master', 'backend.layouts.master')->name('master');
 Route::view('/backend/sidebar/table', 'backend.sidebar.table')->name('table');
-//Route::view('/backend/setting/form', 'backend.setting.form')->name('site.settings.form');
-//site settings routes
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
 
 
 Route::get('/settings', [SettingController::class, 'index'])->name('site.setting');
 Route::post('/settings/update', [SettingController::class, 'update'])->name('site.setting.update');
 
-// // Authentication routes
+// Authentication routes
 // Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 // Route::view('/register', 'auth.register')->name('register');
