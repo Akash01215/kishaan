@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krishi AI - Login</title>
 
     <!-- Bootstrap 5 CDN -->
@@ -70,17 +71,13 @@
             font-size: 14px;
         }
 
-        .text-link:hover {
-            color: #fff;
-        }
-
       
     </style>
 </head>
 
 <body>
 
-   <div class="login-box caveat-bold">
+   <div class="login-box text-#218838">
         <h3 class="text-center mb-4">Login to Krishi AI</h3>
 
         @if(session('error'))

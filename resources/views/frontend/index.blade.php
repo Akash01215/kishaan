@@ -3,7 +3,7 @@
 @section('content')
     
 
-
+ @include('frontend.partials.navbar')
         <!-- About  Start -->
         @include('frontend.partials.about')
         <!-- About End -->
@@ -12,7 +12,7 @@
         @include('frontend.partials.services')
         <!-- Services End -->
 
-      
+     
 
         <!-- FAQs Start -->
         @include('frontend.partials.faqs')
@@ -25,6 +25,8 @@
 
         <!-- Testimonial Start -->
         @include('frontend.partials.testimonial')
+
         <!-- Testimonial End -->
+        
 
 @endsection

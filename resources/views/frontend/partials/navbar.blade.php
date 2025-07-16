@@ -1,10 +1,10 @@
 <div class="container-fluid position-relative p-0">
     <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 fixed-top">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-           <img src="{{ asset($globalSettings['logo'] ?? '') }}"
-     id="siteLogo"
-     alt="Logo"
-     style="height: 60px; width: 60px; object-fit: cover; border-radius: 50%; transition: all 0.3s ease;">
+            <img src="{{ asset($globalSettings['logo'] ?? '') }}"
+                id="siteLogo"
+                alt="Logo"
+                style="height: 60px; width: 60px; object-fit: cover; border-radius: 50%; transition: all 0.3s ease;">
 
             <span id="siteName" class="fw-bold fs-5"
                 style="text-transform: uppercase; font-family: 'Caveat', cursive; color: white; font-weight: 600;">

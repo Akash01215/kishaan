@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Stocker - Stock Market Website Template</title>
+    <title>KRISHI SHATHI</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -29,9 +29,12 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet" />
+    
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet" />
+
+<!-- Bootstrap 5.3 CSS -->
 
     <style>
         .caveat-normal {
@@ -84,7 +87,7 @@
     <!-- Topbar Start -->
     @include('frontend.partials.topbar')
     <!-- Topbar End -->
-    @include('frontend.partials.navbar')
+    
 
     @yield('content')
     <!-- Footer Start -->
@@ -96,11 +99,9 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-md-0">
-                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>KRISHI AI</a>, All right reserved.</span>
                 </div>
-                <div class="col-md-6 text-center text-md-end text-body">
-                    Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -121,7 +122,7 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
-// Adjust navbar background color on scroll
+
     <script>
     window.addEventListener('scroll', function () {
         const siteName = document.getElementById('siteName');
@@ -133,7 +134,20 @@
     });
 </script>
 
-// Adjust logo size and border on scroll
+    <script>
+        window.addEventListener('scroll', function () {
+            const siteLogo = document.getElementById('siteLogo');
+            if (window.scrollY > 50) {
+                siteLogo.style.height = '50px';   // slightly smaller
+                siteLogo.style.width = '50px';
+                siteLogo.style.border = '2px solid #000'; // black border
+            } else {
+                siteLogo.style.height = '60px';   // original size
+                siteLogo.style.width = '60px';
+                siteLogo.style.border = 'none';
+            }
+        });
+    </script>
 <script>
     window.addEventListener('scroll', function () {
         const siteName = document.getElementById('siteName');
@@ -151,6 +165,15 @@
             siteLogo.style.border = 'none';
         }
     });
+</script>
+
+<script>
+function openLoginForm() {
+  document.getElementById("loginModal").style.display = "block";
+}
+function closeLoginForm() {
+  document.getElementById("loginModal").style.display = "none";
+}
 </script>
 
 </body>

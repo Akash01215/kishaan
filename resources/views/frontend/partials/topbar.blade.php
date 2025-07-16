@@ -18,26 +18,48 @@
         </div>
 
         <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a href="{{ url('register') }}" class="me-3 text-dark caveat-bold">
-                    <small><i class="fa fa-user text-primary me-2"></i>Register</small>
-                </a>
-                <a href="{{ url('login') }}" class="me-3 text-dark caveat-bold">
-                    <small><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small>
-                </a>
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle text-dark caveat-bold" data-bs-toggle="dropdown">
-                        <small><i class="fa fa-home text-primary me-2"></i> My Dashboard</small>
-                    </a>
-                    <div class="dropdown-menu rounded">
-                        <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                        <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                        <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-bell me-2"></i> Notifications</a>
-                        <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                        <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-power-off me-2"></i> Log Out</a>
-                    </div>
-                </div>
-            </div>
+    <div class="d-inline-flex align-items-center" style="height: 45px;">
+        @if(Auth::check())
+            <p class="text-success mb-0 me-3">
+                Welcome, {{ Auth::user()->name }} ({{ Auth::user()->role }})
+            </p>
+            <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                @csrf
+                <button type="submit" class="dropdown-item caveat-normal border-0 bg-transparent p-0">
+                    <i class="fas fa-sign-out-alt me-2"></i> Logout
+                </button>
+            </form>
+        @else
+            <a href="{{ route('login') }}" class="dropdown-item caveat-normal">
+                <i class="fas fa-sign-in-alt me-2"></i> Login
+            </a>
+            <a href="{{ route('register') }}" class="dropdown-item caveat-normal">
+                <i class="fas fa-user-plus me-2"></i> Register
+            </a>
+        @endif
+    </div>
+
+    @if(Auth::check())
+    <div class="dropdown d-inline-block ms-3">
+        <a href="{{ Auth::user()->role == 'admin' ? url('/dashboard') : url('/') }}" class="dropdown-toggle text-dark caveat-bold" data-bs-toggle="dropdown">
+    <small><i class="fa fa-home text-primary me-2"></i> My Dashboard</small>
+</a>
+
+        <div class="dropdown-menu rounded">
+            <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-user-alt me-2"></i> My Profile</a>
+            <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
+            <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-bell me-2"></i> Notifications</a>
+            <a href="#" class="dropdown-item caveat-normal"><i class="fas fa-cog me-2"></i> Account Settings</a>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item caveat-normal border-0 bg-transparent p-0">
+                    <i class="fas fa-power-off me-2"></i> Log Out
+                </button>
+            </form>
         </div>
+    </div>
+    @endif
+</div>
+
     </div>
 </div>

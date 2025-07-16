@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('backend/img/apple-icon.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('backend/img/favicon.png') }}">
     <title>
-        Material Dashboard 3 by Creative Tim
+        @yield('title', 'Dashboard') - {{ $globalSettings['sitename'] ?? 'My Site' }} - Admin Dashboard
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
@@ -40,54 +40,41 @@
 <body class="g-sidenav-show  bg-gray-100">
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2" id="sidenav-main">
         <div class="sidenav-header">
-            <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand px-4 py-3 m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
-                <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img" width="26" height="26" alt="main_logo">
-                <span class="ms-1 text-sm text-dark">Creative Tim</span>
-            </a>
+             <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url('/dashboard') }}">
+            <img src="{{ asset($globalSettings['logo'] ?? '') }}"
+                id="siteLogo"
+                alt="Logo"
+                style="height: 60px; width: 60px; object-fit: cover; border-radius: 50%; transition: all 0.3s ease;">
+
+            <span id="siteName" class="fw-bold fs-5"
+                style="text-transform: uppercase; font-family: 'Caveat', cursive; color: white; font-weight: 600;">
+                {{ $globalSettings['sitename'] ?? 'My Site' }}
+            </span>
+        </a>
         </div>
         <hr class="horizontal dark mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active bg-gradient-dark text-white" href="../pages/dashboard.html">
-                        <i class="material-symbols-rounded opacity-5">dashboard</i>
-                        <span class="nav-link-text ms-1">Dashboard</span>
+                    <a class="nav-link active bg-gradient-dark text-white" href="{{ url('/dashboard') }}">
+                        <i class="material-symbols-rounded opacity-5">Krishi AI</i>
+                        <span class="nav-link-text ms-1"></span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="{{url('/backend/sidebar/table')}}">
+                    <a class="nav-link text-dark" href="{{ route('users.index') }}">
                         <i class="material-symbols-rounded opacity-5">table_view</i>
                         <span class="nav-link-text ms-1">Tables</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="../pages/billing.html">
-                        <i class="material-symbols-rounded opacity-5">receipt_long</i>
-                        <span class="nav-link-text ms-1">Billing</span>
-                    </a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{{ route('site.setting') }}">
                         <i class="material-symbols-rounded opacity-5">view_in_ar</i>
                         <span class="nav-link-text ms-1">site settings</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="../pages/rtl.html">
-                        <i class="material-symbols-rounded opacity-5">format_textdirection_r_to_l</i>
-                        <span class="nav-link-text ms-1">RTL</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="../pages/notifications.html">
-                        <i class="material-symbols-rounded opacity-5">notifications</i>
-                        <span class="nav-link-text ms-1">Notifications</span>
-                    </a>
-                </li>
-                <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-5">Account pages</h6>
-                </li>
+              
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="../pages/profile.html">
                         <i class="material-symbols-rounded opacity-5">person</i>
@@ -109,10 +96,7 @@
             </ul>
         </div>
         <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-            <div class="mx-3">
-                <a class="btn btn-outline-dark mt-4 w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard?ref=sidebarfree" type="button">Documentation</a>
-                <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
-            </div>
+           
         </div>
     </aside>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
@@ -121,7 +105,7 @@
         <!-- End Navbar -->
         @yield('content')
     </main>
-   // setting remove
+   <!-- setting remove -->
     <!--   Core JS Files   -->
     <script src="{{ asset('backend/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('backend/js/core/bootstrap.min.js') }}"></script>
@@ -371,9 +355,7 @@
         }
     </script>
     <!-- Github buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{ asset('backend/js/material-dashboard.min.js?v=3.2.0') }}"></script>
+   
 </body>
 
 </html>

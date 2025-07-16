@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
            $table->string('name', 100);
            $table->string('email', 100)->unique();
            $table->string('password', 255);
-           $table->enum('role', ['admin', 'farmer', 'expert']);
+           $table->enum('role', ['admin', 'user'])->default('user'); // Define user roles
            $table->timestamps(); // created_at, updated_at
            $table->rememberToken(); // optional, for authentication
        });
