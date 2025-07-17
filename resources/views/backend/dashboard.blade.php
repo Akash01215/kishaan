@@ -9,113 +9,121 @@
                 monitor user activities, plant disease reports, fertilizer usage, and system queries.
             </p>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card shadow-lg border-0 position-relative overflow-hidden" style="border-radius: 20px; transition: 0.3s;">
-                <!-- Background Image -->
-                <img src="https://cdn-icons-png.flaticon.com/512/219/219986.png"
-                    alt="User Icon"
-                    style="position: absolute; right: 10px; top: 10px; width: 50px; opacity: 0.15; z-index: 0;">
+        <div class="card shadow-lg border-0 overflow-hidden" style="border-radius: 20px; width: 300px;">
 
-                <div class="card-header p-3 ps-4 bg-gradient-primary text-white" style="border-radius: 20px 20px 0 0;">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div style="z-index: 1;">
-                            <p class="text-sm mb-0 text-uppercase">Total Users</p>
-                            <h4 class="mb-0 fw-bold">5,400</h4>
-                        </div>
-                        <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg z-index-1">
-                            <i class="material-symbols-rounded text-primary">groups</i>
-                        </div>
+            <!-- 🖼 Top Image Banner -->
+            <div style="height: 150px; overflow: hidden; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <img src="{{ asset('frontend/img/ak.jpg') }}" alt="Top Image"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <!-- 📝 Card Content Below -->
+            <div class="card-body p-3 ps-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="text-sm mb-0 text-uppercase">Total Users</p>
+                        <h4 class="mb-0 fw-bold">5,400</h4>
+                    </div>
+                    <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded text-primary">groups</i>
                     </div>
                 </div>
-
-                <div class="card-footer p-3 ps-4 bg-light" style="z-index: 1;">
-                    <p class="mb-0 text-sm text-secondary">
-                        <span class="text-success fw-bold">+12%</span> from last week
-                    </p>
-                </div>
             </div>
         </div>
 
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card shadow-lg border-0 position-relative overflow-hidden" style="border-radius: 20px; transition: 0.3s;">
-                <!-- Background Image -->
-                <img src="https://cdn-icons-png.flaticon.com/512/219/219986.png"
-                    alt="User Icon"
-                    style="position: absolute; right: 10px; top: 10px; width: 50px; opacity: 0.15; z-index: 0;">
 
-                <div class="card-header p-3 ps-4 bg-gradient-primary text-white" style="border-radius: 20px 20px 0 0;">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div style="z-index: 1;">
-                            <p class="text-sm mb-0 text-uppercase">Total Users</p>
-                            <h4 class="mb-0 fw-bold">5,400</h4>
-                        </div>
-                        <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg z-index-1">
-                            <i class="material-symbols-rounded text-primary">groups</i>
-                        </div>
+        <div class="card shadow-lg border-0 overflow-hidden" style="border-radius: 20px; width: 300px;">
+
+            <!-- 🖼 Top Image Banner -->
+            <div style="height: 100px; overflow: hidden; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                <img src="{{ asset('frontend/img/ak.jpg') }}" alt="Top Image"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <!-- 📝 Card Content Below -->
+            <div class="card-body p-3 ps-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="text-sm mb-0 text-uppercase">Total Users</p>
+                        <h4 class="mb-0 fw-bold">5,400</h4>
+                    </div>
+                    <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded text-primary">groups</i>
                     </div>
                 </div>
-
-                <div class="card-footer p-3 ps-4 bg-light" style="z-index: 1;">
-                    <p class="mb-0 text-sm text-secondary">
-                        <span class="text-success fw-bold">+12%</span> from last week
-                    </p>
-                </div>
             </div>
+
+            <!-- 📊 Footer -->
+            <div class="card-footer p-3 ps-4 bg-light">
+                <p class="mb-0 text-sm text-secondary">
+                    <span class="text-success fw-bold">+12%</span> from last week
+                </p>
+            </div>
+
         </div>
 
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card shadow-lg border-0 position-relative overflow-hidden" style="border-radius: 20px; transition: 0.3s;">
-                <!-- Background Image -->
-                <img src="https://cdn-icons-png.flaticon.com/512/219/219986.png"
-                    alt="User Icon"
-                    style="position: absolute; right: 10px; top: 10px; width: 50px; opacity: 0.15; z-index: 0;">
 
-                <div class="card-header p-3 ps-4 bg-gradient-primary text-white" style="border-radius: 20px 20px 0 0;">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div style="z-index: 1;">
-                            <p class="text-sm mb-0 text-uppercase">Total Users</p>
-                            <h4 class="mb-0 fw-bold">5,400</h4>
-                        </div>
-                        <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg z-index-1">
-                            <i class="material-symbols-rounded text-primary">groups</i>
-                        </div>
+        <div class="card shadow-lg border-0 overflow-hidden" style="border-radius: 20px; width: 300px;">
+
+            <!-- 🖼 Top Image Banner -->
+            <div style="height: 100px; overflow: hidden; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                <img src="{{ asset('frontend/img/ak.jpg') }}" alt="Top Image"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <!-- 📝 Card Content Below -->
+            <div class="card-body p-3 ps-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="text-sm mb-0 text-uppercase">Total Users</p>
+                        <h4 class="mb-0 fw-bold">5,400</h4>
+                    </div>
+                    <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded text-primary">groups</i>
                     </div>
                 </div>
+            </div>
 
-                <div class="card-footer p-3 ps-4 bg-light" style="z-index: 1;">
-                    <p class="mb-0 text-sm text-secondary">
-                        <span class="text-success fw-bold">+12%</span> from last week
-                    </p>
+            <!-- 📊 Footer -->
+            <div class="card-footer p-3 ps-4 bg-light">
+                <p class="mb-0 text-sm text-secondary">
+                    <span class="text-success fw-bold">+12%</span> from last week
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="card shadow-lg border-0 overflow-hidden" style="border-radius: 20px; width: 300px;">
+
+            <!-- 🖼 Top Image Banner -->
+            <div style="height: 100px; overflow: hidden; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                <img src="{{ asset('frontend/img/ak.jpg') }}" alt="Top Image"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <!-- 📝 Card Content Below -->
+            <div class="card-body p-3 ps-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="text-sm mb-0 text-uppercase">Total Users</p>
+                        <h4 class="mb-0 fw-bold">5,400</h4>
+                    </div>
+                    <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg">
+                        <i class="material-symbols-rounded text-primary">groups</i>
+                    </div>
                 </div>
             </div>
-        </div>
 
-       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-    <div class="card shadow-lg border-0 position-relative overflow-hidden" style="border-radius: 20px; transition: 0.3s;">
-        <!-- Background Image -->
-        <img src="https://cdn-icons-png.flaticon.com/512/219/219986.png" 
-             alt="User Icon" 
-             style="position: absolute; right: 10px; top: 10px; width: 50px; opacity: 0.15; z-index: 0;">
-
-        <div class="card-header p-3 ps-4 bg-gradient-primary text-white" style="border-radius: 20px 20px 0 0;">
-            <div class="d-flex justify-content-between align-items-center">
-                <div style="z-index: 1;">
-                    <p class="text-sm mb-0 text-uppercase">Total Users</p>
-                    <h4 class="mb-0 fw-bold">5,400</h4>
-                </div>
-                <div class="icon icon-md icon-shape bg-white shadow text-center border-radius-lg z-index-1">
-                    <i class="material-symbols-rounded text-primary">groups</i>
-                </div>
+            <!-- 📊 Footer -->
+            <div class="card-footer p-3 ps-4 bg-light">
+                <p class="mb-0 text-sm text-secondary">
+                    <span class="text-success fw-bold">+12%</span> from last week
+                </p>
             </div>
+
         </div>
 
-        <div class="card-footer p-3 ps-4 bg-light" style="z-index: 1;">
-            <p class="mb-0 text-sm text-secondary">
-                <span class="text-success fw-bold">+12%</span> from last week
-            </p>
-        </div>
-    </div>
-</div>
 
     </div>
     <div class="row">

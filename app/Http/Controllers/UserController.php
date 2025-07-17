@@ -8,7 +8,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::all(); // lowercase variable
-        return view('backend.sidebar.table', compact('users'));
+        return view('frontend.index'); // Your frontend index view
     }
 }

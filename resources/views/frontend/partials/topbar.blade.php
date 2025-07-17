@@ -21,7 +21,7 @@
     <div class="d-inline-flex align-items-center" style="height: 45px;">
         @if(Auth::check())
             <p class="text-success mb-0 me-3">
-                Welcome, {{ Auth::user()->name }} ({{ Auth::user()->role }})
+                Welcome, {{ Auth::user()->name }} 
             </p>
             <form action="{{ route('logout') }}" method="POST" class="d-inline">
                 @csrf

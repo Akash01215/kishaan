@@ -63,14 +63,7 @@
         }
 
         
-        body, .caveat-normal, .caveat-bold {
-    font-family: 'Caveat', cursive;
-    font-size: 1.5rem; /* Increase as needed */
-        }
-
-        .caveat-bold {
-            font-weight: 700;
-        }
+       
     </style>
 </head>
 <body>
@@ -82,7 +75,7 @@
             @csrf
 
             <!-- Full Name -->
-            <div class="mb-3 caveat-bold">
+            <div class="mb-3 ">
                 <label for="name" class="form-label">Full Name</label>
                 <input type="text" name="name" id="name" autocomplete="name"
                        class="form-control @error('name') is-invalid @enderror"
