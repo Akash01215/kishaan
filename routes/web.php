@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ActivityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,9 @@ Route::get('/index', [UserController::class, 'index'])->name('frontend.index');
 
 //admin routes
 Route::middleware('role:admin')->prefix('admin')->group(function () {
-  Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+  Route::get('/dashboard', [DashboardController::class, 'index'])->name('backend.dashboard');
+  Route::get('/activity', [DashboardController::class, 'activityPage'])->name('backend.activity');
+   Route::get('/activities', [ActivityController::class, 'index'])->name('backend.activities.index');
     Route::resource('crop-recommendations', 'CropRecommendationController');
     Route::resource('fertilizer-suggestions', 'FertilizerSuggestionController');
     Route::resource('disease-reports', 'DiseaseReportController');
