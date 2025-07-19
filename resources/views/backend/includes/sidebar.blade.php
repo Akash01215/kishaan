@@ -15,6 +15,12 @@
                     Dashboard
                 </a>
             </li>
+             <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('frontend.index') }}">
+                    <i class="fas fa-tachometer-alt me-2"></i>
+                    Back to home 
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}" href="{{ route('frontend.index') }}">
                     <i class="fas fa-users me-2"></i>

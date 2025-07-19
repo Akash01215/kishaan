@@ -20,7 +20,7 @@
 
 
         <!-- Team Start -->
-       @include('frontend.partials.team')
+      
         <!-- Team End -->
 
         <!-- Testimonial Start -->

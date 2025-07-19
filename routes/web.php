@@ -54,8 +54,6 @@ Route::middleware('role:admin')->prefix('admin')->group(function () {
 
 
 
-
-
 //backend routes
 // Route::view('/dashboard', 'backend.dashboard')->name('dashboard');
 // Route::view('/master', 'backend.layouts.master')->name('master');

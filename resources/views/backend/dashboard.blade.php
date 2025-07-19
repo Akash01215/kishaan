@@ -68,7 +68,7 @@
                         <i class="fas fa-arrow-up me-1"></i>
                         +3.2%
                     </small>
-                    <a href="" class="btn btn-sm btn-outline-success btn-custom">
+                    <a href="{{ route('disease-reports.index') }}" class="btn btn-sm btn-outline-success btn-custom">
                         <i class="fas fa-eye me-1"></i>
                         View
                     </a>
@@ -90,7 +90,7 @@
                         <i class="fas fa-arrow-up me-1"></i>
                         +8.1%
                     </small>
-                    <a href="" class="btn btn-sm btn-outline-warning btn-custom">
+                    <a href="{{ route('fertilizer-suggestions.index') }}" class="btn btn-sm btn-outline-warning btn-custom">
                         <i class="fas fa-eye me-1"></i>
                         View
                     </a>
@@ -123,112 +123,7 @@
 </div>
 
 <!-- Charts and Analytics -->
-<div class="row mb-4">
-    <div class="col-lg-8 mb-4">
-        <div class="chart-container">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h5 class="fw-bold mb-0">
-                    <i class="fas fa-chart-line text-success me-2"></i>
-                    Monthly Analytics Overview
-                </h5>
-                <div class="btn-group" role="group">
-                    <button class="btn btn-sm btn-outline-success active">Month</button>
-                    <button class="btn btn-sm btn-outline-success">Quarter</button>
-                    <button class="btn btn-sm btn-outline-success">Year</button>
-                </div>
-            </div>
-            <div class="bg-light rounded p-5 text-center" style="height: 300px;">
-                <i class="fas fa-chart-bar fa-3x text-success mb-3"></i>
-                <h6 class="text-muted">Analytics Chart</h6>
-                <p class="text-muted small">Interactive charts will be displayed here</p>
-                <button class="btn btn-primary-custom btn-custom">
-                    <i class="fas fa-plus me-2"></i>
-                    Generate Report
-                </button>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-lg-4 mb-4">
-        <div class="dashboard-card h-100">
-            <div class="card-header bg-success text-white">
-                <h6 class="mb-0">
-                    <i class="fas fa-clock me-2"></i>
-                    Recent Activities
-                </h6>
-            </div>
-            <div class="card-body p-0">
-                @forelse($recentActivities ?? [] as $activity)
-                <div class="activity-item">
-                    <div class="d-flex align-items-center">
-                        <div class="bg-{{ $activity['color'] ?? 'primary' }} rounded-circle p-2 me-3">
-                            <i class="fas fa-{{ $activity['icon'] ?? 'user' }} text-white"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                            <h6 class="mb-1">{{ $activity['title'] ?? 'Activity' }}</h6>
-                            <small class="text-muted">{{ $activity['time'] ?? '2 hours ago' }}</small>
-                        </div>
-                    </div>
-                </div>
-                @empty
-                <div class="activity-item">
-                    <div class="d-flex align-items-center">
-                        <div class="bg-primary rounded-circle p-2 me-3">
-                            <i class="fas fa-user-plus text-white"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                            <h6 class="mb-1">New User Registration</h6>
-                            <small class="text-muted">2 hours ago</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="d-flex align-items-center">
-                        <div class="bg-success rounded-circle p-2 me-3">
-                            <i class="fas fa-file-alt text-white"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                            <h6 class="mb-1">Disease Report Submitted</h6>
-                            <small class="text-muted">4 hours ago</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="d-flex align-items-center">
-                        <div class="bg-warning rounded-circle p-2 me-3">
-                            <i class="fas fa-seedling text-white"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                            <h6 class="mb-1">Fertilizer Data Updated</h6>
-                            <small class="text-muted">6 hours ago</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="d-flex align-items-center">
-                        <div class="bg-info rounded-circle p-2 me-3">
-                            <i class="fas fa-question-circle text-white"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                            <h6 class="mb-1">Query Resolved</h6>
-                            <small class="text-muted">8 hours ago</small>
-                        </div>
-                    </div>
-                </div>
-                @endforelse
-            </div>
-            <div class="card-footer bg-light">
-                <a href="" class="btn btn-primary-custom btn-custom w-100">
-                    <i class="fas fa-history me-2"></i>
-                    View All Activities
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Quick Actions -->
 <div class="row mb-4">

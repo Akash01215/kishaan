@@ -36,7 +36,7 @@
 
         /* Sidebar Styles */
         .sidebar {
-            background: linear-gradient(135deg, var(--sidebar-bg) 0%, #34495e 100%);
+            background: linear-gradient(135deg, var(--sidebar-bg) 0%, hsla(113, 70%, 51%, 1.00) 100%);
             min-height: 100vh;
             box-shadow: 2px 0 10px rgba(0,0,0,0.1);
         }
