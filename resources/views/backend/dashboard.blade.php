@@ -39,14 +39,14 @@
                 <div class="stats-icon users mx-auto">
                     <i class="fas fa-users"></i>
                 </div>
-                <h2 class="fw-bold text-primary mb-1">{{ $totalUsers ?? '5,247' }}</h2>
+                <h2 class="fw-bold text-primary mb-1">{{ $totalUsers }}</h2>
                 <p class="text-muted mb-2">Total Users</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <small class="text-success">
                         <i class="fas fa-arrow-up me-1"></i>
                         +12.5%
                     </small>
-                    <a href="" class="btn btn-sm btn-outline-primary btn-custom">
+                    <a href="{{ route('users.index') }}" class="btn btn-sm btn-outline-primary btn-custom">
                         <i class="fas fa-eye me-1"></i>
                         View
                     </a>
@@ -83,8 +83,8 @@
                 <div class="stats-icon fertilizer mx-auto">
                     <i class="fas fa-seedling"></i>
                 </div>
-                <h2 class="fw-bold text-warning mb-1">{{ $fertilizerUsage ?? '8,756' }}</h2>
-                <p class="text-muted mb-2">Fertilizer Usage</p>
+                <h2 class="fw-bold text-warning mb-1">{{ $totalSuggestions ?? '8,756' }}</h2>
+                <p class="text-muted mb-2">Fertilizer Suggestions</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <small class="text-success">
                         <i class="fas fa-arrow-up me-1"></i>
@@ -138,7 +138,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-3">
-                        <a href="" class="btn btn-outline-primary btn-custom w-100 h-100 py-3 text-decoration-none">
+                        <a href="{{ route('users.create') }}" class="btn btn-outline-primary btn-custom w-100 h-100 py-3 text-decoration-none">
                             <i class="fas fa-user-plus fa-2x mb-2 d-block"></i>
                             Add New User
                         </a>
@@ -150,13 +150,13 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-3">
-                        <a href="" class="btn btn-outline-warning btn-custom w-100 h-100 py-3 text-decoration-none">
+                        <a href="{{ route('fertilizer-suggestions.index') }}" class="btn btn-outline-warning btn-custom w-100 h-100 py-3 text-decoration-none">
                             <i class="fas fa-seedling fa-2x mb-2 d-block"></i>
                             Update Fertilizer
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-3">
-                        <a href="" class="btn btn-outline-info btn-custom w-100 h-100 py-3 text-decoration-none">
+                        <a href="{{ route('site.setting') }}" class="btn btn-outline-info btn-custom w-100 h-100 py-3 text-decoration-none">
                             <i class="fas fa-cog fa-2x mb-2 d-block"></i>
                             System Settings
                         </a>
@@ -197,106 +197,43 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse($userActivities ?? [] as $activity)
+                            @forelse($userActivities as $activity)
                             <tr>
-                                <td>#{{ str_pad($activity['id'] ?? 1, 3, '0', STR_PAD_LEFT) }}</td>
+                                <td>#{{ str_pad($activity->id, 3, '0', STR_PAD_LEFT) }}</td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <div class="bg-{{ $activity['color'] ?? 'primary' }} rounded-circle me-2 d-flex align-items-center justify-content-center"
+                                        @php
+                                        $name = $activity->user->name ?? 'User';
+                                        $color = ['primary', 'success', 'info', 'warning', 'danger'][rand(0, 4)];
+                                        @endphp
+                                        <div class="bg-{{ $color }} rounded-circle me-2 d-flex align-items-center justify-content-center"
                                             style="width: 30px; height: 30px;">
-                                            <span class="text-white small">{{ strtoupper(substr($activity['name'] ?? 'RK', 0, 2)) }}</span>
+                                            <span class="text-white small">{{ strtoupper(substr($name, 0, 2)) }}</span>
                                         </div>
-                                        {{ $activity['name'] ?? 'Raj Kumar' }}
+                                        {{ $name }}
                                     </div>
                                 </td>
-                                <td>{{ $activity['activity'] ?? 'Disease Report Submission' }}</td>
+                                <td>{{ $activity->activity }}</td>
                                 <td>
-                                    <span class="badge bg-{{ $activity['status_color'] ?? 'success' }}">
-                                        {{ $activity['status'] ?? 'Completed' }}
-                                    </span>
+                                    <span class="badge bg-success">Completed</span>
                                 </td>
-                                <td>{{ $activity['date'] ?? '2024-01-15' }}</td>
+                                <td>{{ $activity->created_at->format('Y-m-d') }}</td>
                                 <td>
-                                    <a href="" class="btn btn-sm btn-outline-primary me-1">
+                                    <a href="#" class="btn btn-sm btn-outline-primary me-1">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="" class="btn btn-sm btn-outline-success">
+                                    <a href="#" class="btn btn-sm btn-outline-success">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </td>
                             </tr>
                             @empty
                             <tr>
-                                <td>#001</td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="bg-primary rounded-circle me-2 d-flex align-items-center justify-content-center"
-                                            style="width: 30px; height: 30px;">
-                                            <span class="text-white small">RK</span>
-                                        </div>
-                                        Raj Kumar
-                                    </div>
-                                </td>
-                                <td>Disease Report Submission</td>
-                                <td><span class="badge bg-success">Completed</span></td>
-                                <td>2024-01-15</td>
-                                <td>
-                                    <button class="btn btn-sm btn-outline-primary me-1">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-outline-success">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#002</td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="bg-success rounded-circle me-2 d-flex align-items-center justify-content-center"
-                                            style="width: 30px; height: 30px;">
-                                            <span class="text-white small">AS</span>
-                                        </div>
-                                        Amit Singh
-                                    </div>
-                                </td>
-                                <td>Fertilizer Usage Update</td>
-                                <td><span class="badge bg-warning">Pending</span></td>
-                                <td>2024-01-14</td>
-                                <td>
-                                    <button class="btn btn-sm btn-outline-primary me-1">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-outline-success">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#003</td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="bg-info rounded-circle me-2 d-flex align-items-center justify-content-center"
-                                            style="width: 30px; height: 30px;">
-                                            <span class="text-white small">PG</span>
-                                        </div>
-                                        Priya Gupta
-                                    </div>
-                                </td>
-                                <td>System Query</td>
-                                <td><span class="badge bg-info">In Progress</span></td>
-                                <td>2024-01-13</td>
-                                <td>
-                                    <button class="btn btn-sm btn-outline-primary me-1">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-outline-success">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
+                                <td colspan="6" class="text-center">No activities found.</td>
                             </tr>
                             @endforelse
                         </tbody>
+
                     </table>
                 </div>
             </div>

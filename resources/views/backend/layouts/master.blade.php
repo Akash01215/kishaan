@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Krishi Shathi - Laravel Admin Dashboard')</title>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Bootstrap CSS (v5) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
     <style>
         /* Custom CSS Variables */
         :root {
@@ -38,7 +42,7 @@
         .sidebar {
             background: linear-gradient(135deg, var(--sidebar-bg) 0%, hsla(113, 70%, 51%, 1.00) 100%);
             min-height: 100vh;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar .nav-link {
@@ -80,7 +84,7 @@
         /* Header Styles */
         .main-header {
             background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 1px solid #e9ecef;
         }
 
@@ -88,7 +92,7 @@
         .dashboard-card {
             border: none;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             overflow: hidden;
             background: white;
@@ -96,7 +100,7 @@
 
         .dashboard-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .card-header-custom {
@@ -114,7 +118,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.3) 100%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.3) 100%);
         }
 
         /* Stats Cards */
@@ -122,7 +126,7 @@
             background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
             border: none;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             overflow: hidden;
             position: relative;
@@ -140,7 +144,7 @@
 
         .stats-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         .stats-icon {
@@ -155,10 +159,21 @@
             margin-bottom: 15px;
         }
 
-        .stats-icon.users { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); }
-        .stats-icon.reports { background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%); }
-        .stats-icon.fertilizer { background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); }
-        .stats-icon.queries { background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%); }
+        .stats-icon.users {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        }
+
+        .stats-icon.reports {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+        }
+
+        .stats-icon.fertilizer {
+            background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+        }
+
+        .stats-icon.queries {
+            background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%);
+        }
 
         /* Button Styles */
         .btn-custom {
@@ -185,7 +200,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
         .table-custom thead {
@@ -204,7 +219,7 @@
             background: white;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             position: relative;
         }
 
@@ -226,13 +241,13 @@
             margin-bottom: 15px;
             background: white;
             border-radius: 0 10px 10px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .activity-item:hover {
             transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         /* Responsive Adjustments */
@@ -241,11 +256,11 @@
                 transform: translateX(-100%);
                 transition: transform 0.3s ease;
             }
-            
+
             .sidebar.show {
                 transform: translateX(0);
             }
-            
+
             .main-content {
                 margin-left: 0 !important;
             }
@@ -257,8 +272,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .slide-in-left {
@@ -266,8 +288,15 @@
         }
 
         @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         /* Custom Scrollbar */
@@ -290,6 +319,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="d-flex">
         @include('backend.includes.sidebar')
@@ -308,16 +338,16 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
         // Sidebar Toggle for Mobile
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             const overlay = document.getElementById('sidebar-overlay');
             const mainContent = document.getElementById('main-content');
-            
+
             sidebar.classList.toggle('show');
-            
+
             if (sidebar.classList.contains('show')) {
                 overlay.style.display = 'block';
                 mainContent.style.marginLeft = '0';
@@ -337,7 +367,7 @@
             const sidebar = document.querySelector('.sidebar');
             const overlay = document.getElementById('sidebar-overlay');
             const mainContent = document.getElementById('main-content');
-            
+
             if (window.innerWidth >= 768) {
                 sidebar.classList.remove('show');
                 overlay.style.display = 'none';
@@ -347,7 +377,13 @@
             }
         });
     </script>
-    
+    <!-- Bootstrap JS & dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
     @stack('scripts')
 </body>
+
 </html>

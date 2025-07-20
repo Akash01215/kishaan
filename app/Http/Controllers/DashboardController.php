@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Activity;
 use App\UserActivity;
+use App\FertilizerSuggestion;
+use App\DiseaseReport;
+use App\User;
 
 class DashboardController extends Controller
 {
-   public function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
     }
@@ -22,16 +25,20 @@ class DashboardController extends Controller
                             ->paginate(5);
 
         $totalActivities = UserActivity::where('user_id', Auth::id())->count();
+        $totalUsers = User::count(); // dynamic user count
+          $totalReports = DiseaseReport::count();
+          $totalSuggestions = FertilizerSuggestion::count();
+        
 
-        // Pass data to view
-        return view('backend.dashboard', compact('userActivities', 'totalActivities'));
-
-        // Optional: record this visit as activity
+        // Optional: Log activity
         UserActivity::create([
             'user_id' => Auth::id(),
             'activity' => 'Visited Dashboard',
             'ip_address' => request()->ip(),
         ]);
-    }
 
+        // Pass all dynamic data to view
+        return view('backend.dashboard', compact('userActivities', 'totalActivities', 'totalUsers', 'totalReports', 'totalSuggestions'));
+    }
 }
+    
