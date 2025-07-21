@@ -37,9 +37,12 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 //admin routes
 Route::middleware('role:admin')->prefix('admin')->group(function () {
   Route::get('/dashboard', [DashboardController::class, 'index'])->name('backend.dashboard');
+<<<<<<< Updated upstream
   Route::get('/activity', [DashboardController::class, 'activityPage'])->name('backend.activity');
   Route::get('/display', [DashboardController::class, 'display'])->name('backend.display');
    Route::get('/activities', [ActivityController::class, 'index'])->name('backend.activities.index');
+=======
+>>>>>>> Stashed changes
     Route::resource('crop-recommendations', 'CropRecommendationController');
     Route::resource('fertilizer-suggestions', 'FertilizerSuggestionController');
     Route::resource('disease-reports', 'DiseaseReportController');

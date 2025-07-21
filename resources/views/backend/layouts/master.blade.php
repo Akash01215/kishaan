@@ -331,6 +331,7 @@
                 @yield('content')
             </main>
         </div>
+<<<<<<< Updated upstream
 
         <!-- Mobile Sidebar Overlay -->
         <div id="sidebar-overlay" class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-md-none" style="z-index: 999; display: none;"></div>
@@ -339,6 +340,68 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+=======
+        <hr class="horizontal dark mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active bg-gradient-dark text-white" href="{{ url('/dashboard') }}">
+                        <i class="material-symbols-rounded opacity-5">Krishi AI</i>
+                        <span class="nav-link-text ms-1"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="">
+                        <i class="material-symbols-rounded opacity-5">table_view</i>
+                        <span class="nav-link-text ms-1">Tables</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{{ route('site.setting') }}">
+                        <i class="material-symbols-rounded opacity-5">view_in_ar</i>
+                        <span class="nav-link-text ms-1">site settings</span>
+                    </a>
+                </li>
+              
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../pages/profile.html">
+                        <i class="material-symbols-rounded opacity-5">person</i>
+                        <span class="nav-link-text ms-1">Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../pages/sign-in.html">
+                        <i class="material-symbols-rounded opacity-5">login</i>
+                        <span class="nav-link-text ms-1">Sign In</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../pages/sign-up.html">
+                        <i class="material-symbols-rounded opacity-5">assignment</i>
+                        <span class="nav-link-text ms-1">Sign Up</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+           
+        </div>
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        @include('backend.includes.navbar')
+        <!-- End Navbar -->
+        @yield('content')
+    </main>
+   <!-- setting remove -->
+    <!--   Core JS Files   -->
+    <script src="{{ asset('backend/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('backend/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('backend/js/plugins/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('backend/js/plugins/smooth-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('backend/js/plugins/chartjs.min.js') }}"></script>
+>>>>>>> Stashed changes
     <script>
         // Sidebar Toggle for Mobile
         function toggleSidebar() {
