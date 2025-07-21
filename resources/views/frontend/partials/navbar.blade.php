@@ -1,3 +1,4 @@
+<section id="home">
 <div class="container-fluid position-relative p-0">
     <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 fixed-top">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#">
@@ -16,10 +17,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link caveat-bold active">Home</a>
-                <a href="about.html" class="nav-item nav-link caveat-bold">About</a>
-                <a href="service.html" class="nav-item nav-link caveat-bold">Services</a>
-                <a href="blog.html" class="nav-item nav-link caveat-bold">Blogs</a>
+                <a href="#home" class="nav-item nav-link caveat-bold active">Home</a>
+                <a href="#about" class="nav-item nav-link caveat-bold">About</a>
+                <a href="#services" class="nav-item nav-link caveat-bold">Services</a>
+                <a href="#features" class="nav-item nav-link caveat-bold">Features</a>
+                <a href="#contact" class="nav-item nav-link caveat-bold">Contact</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link caveat-bold" data-bs-toggle="dropdown">
                         <span class="dropdown-toggle">Pages</span>
@@ -159,3 +161,4 @@
 
     <!-- Carousel End -->
 </div>
+</section>

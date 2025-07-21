@@ -11,7 +11,7 @@
                     <i class="fas fa-quote-left fa-2x"></i>
                 </div>
                 <div class="testimonial-img">
-                    <img src="{{ asset('frontend/img/farmer1.jpg') }}" class="img-fluid" alt="Image">
+                    <img src="{{ asset('frontend/img/testimonial-3.jpg') }}" class="img-fluid" alt="Image">
                 </div>
                 <div class="testimonial-text">
                     <p class="mb-0">Thanks to Krishi AI, I now know exactly what crop to grow based on my soil data. It has saved me time and money!</p>
@@ -38,7 +38,7 @@
                     <i class="fas fa-quote-left fa-2x"></i>
                 </div>
                 <div class="testimonial-img">
-                    <img src="{{ asset('frontend/img/farmer2.jpg') }}" class="img-fluid" alt="Image">
+                    <img src="{{ asset('frontend/img/testimonial-2.jpg') }}" class="img-fluid" alt="Image">
                 </div>
                 <div class="testimonial-text">
                     <p class="mb-0">The fertilizer recommendation feature is amazing. I used to guess what my field needed. Now it’s crystal clear!</p>
@@ -65,14 +65,14 @@
                     <i class="fas fa-quote-left fa-2x"></i>
                 </div>
                 <div class="testimonial-img">
-                    <img src="{{ asset('frontend/img/farmer3.jpg') }}" class="img-fluid" alt="Image">
+                    <img src="{{ asset('frontend/img/testimonial-1.jpg') }}" class="img-fluid" alt="Image">
                 </div>
                 <div class="testimonial-text">
                     <p class="mb-0">I uploaded a diseased plant image and got the solution instantly. Truly helpful for remote farmers like me.</p>
                 </div>
                 <div class="testimonial-title">
                     <div>
-                        <h4 class="mb-0">Binod Sharma</h4>
+                        <h4 class="mb-0">Poonam Sharma</h4>
                         <p class="mb-0">Farmer, Pokhara</p>
                     </div>
                     <div class="d-flex text-primary">
