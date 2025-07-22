@@ -20,7 +20,6 @@
                 <a href="#home" class="nav-item nav-link caveat-bold active">Home</a>
                 <a href="#about" class="nav-item nav-link caveat-bold">About</a>
                 <a href="#services" class="nav-item nav-link caveat-bold">Services</a>
-                <a href="#features" class="nav-item nav-link caveat-bold">Features</a>
                 <a href="#contact" class="nav-item nav-link caveat-bold">Contact</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link caveat-bold" data-bs-toggle="dropdown">
@@ -35,7 +34,7 @@
                         <a href="404.html" class="dropdown-item caveat-normal">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link caveat-bold">Contact Us</a>
+               
             </div>
             <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Started</a>
         </div>
