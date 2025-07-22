@@ -8,6 +8,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CropRecommendationController;
+use App\Http\Controllers\FertilizerSuggestionController;
+use App\Http\Controllers\DiseaseReportController;
 
 
 /*
@@ -48,24 +51,29 @@ Route::middleware('role:admin')->prefix('admin')->group(function () {
    Route::post('/settings/update', [SettingController::class, 'update'])->name('site.setting.update');
 });
 
-// User routes
-// Route::middleware('role:user')->prefix('user')->group(function () {
-//     Route::get('/', 'LoginController@dashboarduser')->name('user.dashboard');
-//     Route::get('crop-suggestion', 'UserCropController@index')->name('user.crops');
-//     Route::get('fertilizer-suggestion', 'UserFertilizerController@index')->name('user.fertilizer');
-//     Route::post('disease-report', 'UserDiseaseReportController@store')->name('user.report');
-// });
+// Authenticated user routes
+Route::middleware('role:user')->prefix('user')->group(function () {
+    // Route::get('/dashboard', [DashboardController::class, 'userDashboard'])->name('user.dashboard');
+    // Route::get('/crop-recommendation', [CropRecommendationController::class, 'create'])->name('user.crop.create');
+    // Route::post('/crop-recommendation', [CropRecommendationController::class, 'store'])->name('user.crop.store');
+    // Route::get('/fertilizer-suggestion', [FertilizerSuggestionController::class, 'create'])->name('user.fertilizer.create');
+    // Route::post('/fertilizer-suggestion', [FertilizerSuggestionController::class, 'store'])->name('user.fertilizer.store');
+    // Route::get('/disease-report', [DiseaseReportController::class, 'create'])->name('user.disease.create');
+    // Route::post('/disease-report', [DiseaseReportController::class, 'store'])->name('user.disease.store');
+});
+
+
+
+// Crop recommendation routes
+Route::get('/crop-form', [App\Http\Controllers\CropController::class, 'showForm'])->name('crop.form');
+Route::post('/crop-recommend', [App\Http\Controllers\CropController::class, 'recommend'])->name('crop.recommend');
+// Fertilizer Suggestion Routes
+Route::get('/fertilizer-suggestion', 'FertilizerController@showForm')->name('fertilizer.form');
+Route::post('/fertilizer-suggestion', 'FertilizerController@suggest')->name('fertilizer.suggest');
 
 
 
 
-
-
-//backend routes
-// Route::view('/dashboard', 'backend.dashboard')->name('dashboard');
-// Route::view('/master', 'backend.layouts.master')->name('master');
-// Route::view('/backend/sidebar/table', 'backend.sidebar.table')->name('table');
-// Route::get('/users', [UserController::class, 'index'])->name('users.index');
 
 
 

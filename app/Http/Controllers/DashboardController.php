@@ -28,14 +28,17 @@ class DashboardController extends Controller
         $totalUsers = User::count(); // dynamic user count
           $totalReports = DiseaseReport::count();
           $totalSuggestions = FertilizerSuggestion::count();
-        
+        // dd(session()->all());
 
         // Optional: Log activity
-        UserActivity::create([
-            'user_id' => Auth::id(),
-            'activity' => 'Visited Dashboard',
-            'ip_address' => request()->ip(),
-        ]);
+        if (!session()->has('dashboard_logged')) {
+            UserActivity::create([
+                'user_id' => Auth::id(),
+                'activity' => 'Accessed Dashboard',
+                'ip_address' => request()->ip(),
+            ]);
+            session()->put('dashboard_logged', true);
+        }
 
         // Pass all dynamic data to view
         return view('backend.dashboard', compact('userActivities', 'totalActivities', 'totalUsers', 'totalReports', 'totalSuggestions'));

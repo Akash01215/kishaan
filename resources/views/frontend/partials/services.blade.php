@@ -17,7 +17,7 @@
                                 <a href="#" class="h4 d-inline-block mb-4"> Crop Recommendation</a>
                                 <p class="mb-4">Enter your soil's NPK values, city and state to get the best crop suggestion based on AI and local weather.
                                 </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                               <a href="{{ route('crop.form') }}" class="btn btn-primary rounded-pill">Open Crop Form</a>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                                 <a href="#" class="h4 d-inline-block mb-4">Fertilizer Suggestion</a>
                                 <p class="mb-4">Provide your soil details and crop name, and the system will recommend the right fertilizer by analyzing nutrient deficiencies.
                                 </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="{{ route('fertilizer.form') }}">Get Suggestion</a>
                             </div>
                         </div>
                     </div>
