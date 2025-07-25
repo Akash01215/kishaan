@@ -70,6 +70,9 @@ Route::post('/crop-recommend', [App\Http\Controllers\CropController::class, 'rec
 // Fertilizer Suggestion Routes
 Route::get('/fertilizer-suggestion', 'FertilizerController@showForm')->name('fertilizer.form');
 Route::post('/fertilizer-suggestion', 'FertilizerController@suggest')->name('fertilizer.suggest');
+// Disease Detection Routes
+Route::get('/disease-detection-form', [App\Http\Controllers\DiseaseController::class, 'form'])->name('disease.form');
+Route::post('/detect-disease', [App\Http\Controllers\DiseaseController::class, 'detect'])->name('disease.detect');
 
 
 
