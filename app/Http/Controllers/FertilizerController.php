@@ -34,6 +34,7 @@ class FertilizerController extends Controller
         ]);
 
         $data = json_decode($response->getBody(), true);
+        
 
         if (isset($data['status']) && $data['status'] === 'success') {
             $recommendations = $data['recommendations'];
